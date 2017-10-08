@@ -1,0 +1,167 @@
+package splatoon;
+import java.awt.image.DataBufferByte;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+import java.util.zip.InflaterInputStream;
+
+import javax.xml.bind.DatatypeConverter;
+
+import javafx.animation.AnimationTimer;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcType;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+
+public class GraphicsOut extends Application {
+	dgm holder;
+	int fp=0;
+	int mode = 0;
+	int voto = 0;
+	float[] avg = new float[25];
+	 public static void main(String[] args) {
+        launch(args);
+    }
+ 
+    @Override public void start(Stage primaryStage) {
+    	holder = new dgm();
+    	holder.p = fileRead.Read(new File("C:\\Users\\super\\Documents\\splatoonfull.txt"));
+    	holder.pos = holder.p.get(0).time-500+25000;
+    	long last = holder.p.get(holder.p.size()-1).time-30000; 
+    	holder.range = 1000;
+    	holder.next();
+        primaryStage.setTitle("Graph");
+        Group root = new Group();
+        Canvas canvas = new Canvas(1280, 720);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFont(Font.font("Consolas"));
+        AnimationTimer frameRateMeter = new AnimationTimer() {
+            @Override public void handle(long now) {
+            	if(mode == 1)return;
+            	fp++;
+            	fp%=6;
+            	//if(fp!=0)return;
+            	holder.next();
+            	if(holder.pos>last)holder.pos = holder.p.get(0).time-500+20000;
+            	drawShapes(gc);
+            }
+        };
+        root.getChildren().add(canvas);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+        frameRateMeter.start();
+        primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
+            if(key.getCode()==KeyCode.A) {
+            	mode = 1;
+            }
+            if(key.getCode()==KeyCode.S) {
+            	holder.pos-=200;
+            }
+            if(key.getCode()==KeyCode.I) {
+            	voto-=2;
+            }
+            if(key.getCode()==KeyCode.O) {
+            	voto+=2;
+            }
+      });primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (key) -> {
+          if(key.getCode()==KeyCode.A) {
+          	mode = 0;
+          }
+    });
+    }
+
+    private void drawShapes(GraphicsContext gc) {
+    	gc.setFill(Color.BLACK);
+    	gc.fillRect(0, 0, 1280, 720);
+    	gc.setFill(Color.WHITE);
+    	gc.fillRect(225,0,125,160);
+    	gc.fillRect(475,0,125,160);
+    	gc.setTextAlign(TextAlignment.LEFT);
+    	for(int i = 0;i<holder.iplist.size();i++){
+    		Ipcount s = holder.iplist.get(i);
+    		gc.setFill(Color.WHITE);
+    		gc.fillText(s.ip, 3, i*20+10);
+    		gc.setFill(Color.BLUE);
+    		gc.fillRect(100, i*20, s.insize/10,15);
+    		gc.setFill(Color.RED);
+    		gc.fillRect(100+s.insize/10, i*20, s.outsize/10,15);
+    	}
+    	nnip2 dp = null;
+    	int sv = holder.r.size();
+    	while(sv--!=0){
+    		//if(holder.r.get(sv).dis_addr.startsWith("211.134")&&holder.r.get(sv).nip.id.compareTo("00")==0){
+    		//if(holder.r.get(sv).nip.data.lastIndexOf("03D3")!=-1){
+    		if(holder.r.get(sv).nip.data.lastIndexOf("03D3")!=-1){
+    			//if(holder.r.get(sv).nip.data.substring(0x1C, 0x1E).compareTo("B0")!=0)continue;
+    			//if(holder.r.get(sv).src_addr.startsWith("192.168"))continue;
+    			dp =new nnip2(holder.r.get(sv).data);
+    			break;
+    		}
+    	}
+    	if(dp==null)return;
+    	gc.setTextAlign(TextAlignment.RIGHT);
+    	gc.fillText(dp.sub, 110, 170);
+    	gc.fillText(dp.id, 110, 180);
+    	gc.fillText(dp.counter, 110, 190);
+    	gc.fillText(dp.msa, 110, 200);
+    	gc.fillText(dp.msb, 110, 210);
+    	gc.fillText(dp.flags, 110, 220);
+    	gc.fillText(dp.slot, 110, 230);
+    	gc.fillText(dp.size, 110, 240);
+    	gc.fillText(dp.unknownOne, 110, 250);
+    	gc.fillText(dp.nnid,110, 260);
+    	gc.fillText(dp.type, 110, 270);
+    	gc.fillText(dp.unknownTwo, 110, 280);
+    	gc.setTextAlign(TextAlignment.LEFT);
+    	//if(dp.data.length()<0x200)return;
+    	int skootch = 0;
+    	for(String s :dp.data){
+    		if(!s.startsWith("03D3"))continue; 
+    		if(s.length()>1024)continue;
+    		if(s.length()<92)continue;
+			String r = deflate(s.substring(24));
+			if(!r.startsWith("103C"))continue;
+	    	int index = 0;
+	    	while (index < s.length()) {
+	    	    gc.fillText(s.substring(index, Math.min(index + 16,s.length())),130+skootch,200+(index/2));
+	    	    index += 16;
+	    	}
+	    	gc.fillText(r, 0, 500+(skootch/12));
+	    	skootch +=120;
+	    	String part = r.substring(voto, voto+30);
+	    	int locx = Integer.parseUnsignedInt(part.substring(0,6),16);
+	    	int loxy = Integer.parseUnsignedInt(part.substring(6, 12),16);
+	    	int locz = Integer.parseUnsignedInt(part.substring(12, 18),16);
+	    	gc.fillText(part, 600, 400);
+	    	gc.fillRect(locx/10000, locz/10000, 8, 8);
+	    	byte[] rr = DatatypeConverter.parseHexBinary(part);
+	    	for(int i = 0;i<rr.length;i++)gc.fillRect(i*6, 400-(rr[i]&0xFF), 6, rr[i]&0xFF);
+    	}
+    }
+    public static String deflate(String input){try {
+    	byte[] data  = DatatypeConverter.parseHexBinary(input);
+    	Inflater inflater = new Inflater();   
+    	inflater.setInput(data);  
+    	ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);  
+    	byte[] buffer = new byte[1024];  
+    	while (!inflater.finished()) {  
+    		int count;
+			count = inflater.inflate(buffer);
+    		outputStream.write(buffer, 0, count);  
+    	}  
+    	outputStream.close();
+    	return DatatypeConverter.printHexBinary(outputStream.toByteArray());
+	} catch (DataFormatException | IOException e){return "00";} }
+}

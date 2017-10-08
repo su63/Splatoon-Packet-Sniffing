@@ -1,0 +1,661 @@
+package splatoon;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+
+import javax.xml.bind.DatatypeConverter;
+
+import org.jnetpcap.nio.JBuffer;
+import org.jnetpcap.packet.PcapPacket;
+
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
+import su63.devices.AudioIn;
+import su63.devices.AudioOut;
+import su63.media.streamType;
+
+public class handelbid {//netsh wlan start hostednetwork
+
+	ArrayList<Player> players = new ArrayList<Player>();
+	Player dummy = new Player();
+	ArrayList<NNPacket> holdPacket = new ArrayList<NNPacket>();
+	int frame = 0;
+	boolean capture_modtion = false;
+	boolean show_bitrate = false;
+	boolean show_sent_data = false;
+	boolean show_game_data = false;
+	boolean show_map = false;
+	boolean show_damage = false;
+	ArrayList<String> gamedata= new ArrayList<String>();
+	int fmi = 0;
+	int fallow = 0;
+	MapPrinter mapPrinter = new MapPrinter();
+	geo map = new geo(null);
+	public static void main(String[]a){
+		 splatlive.init(a);
+	}
+	public handelbid(){
+		dummy.bestPing = 1000;
+		dummy.tank = 512;
+		dummy.name = "NoSquidKid";
+		startDamageFilter();
+	}
+	public void onNewPacket(PcapPacket packet){
+		ArrayList<Player> players = this.players;
+        int size = packet.size();  
+        JBuffer buffer = packet; 
+        byte[] array = buffer.getByteArray(0, size);  
+        UDPPacket a = new UDPPacket(array);
+        if(a.nip==null)return;
+        if(a.nip.NNData==null)return;
+        Player player = null;
+		for(int i = 0;i < players.size();i++){
+			player = players.get(i);
+			if(player.ip.matches(a.src_addr) && player.port == a.src_port)break;
+			player = null;
+		}
+        if(player==null){
+			player = new Player();
+			player.ip = a.src_addr;
+			player.port = a.src_port;
+			player.name = "New Player!";
+			if(a.src_addr.startsWith("192.168")||
+						a.src_addr.startsWith("10.")||
+						a.src_addr.startsWith("172.16.")||
+						a.src_addr.startsWith("172.17.")||
+						a.src_addr.startsWith("172.18.")||
+						a.src_addr.startsWith("172.19.")||
+						a.src_addr.startsWith("172.20.")||
+						a.src_addr.startsWith("172.21.")||
+						a.src_addr.startsWith("172.22.")||
+						a.src_addr.startsWith("172.23.")||
+						a.src_addr.startsWith("172.24.")||
+						a.src_addr.startsWith("172.25.")||
+						a.src_addr.startsWith("172.26.")||
+						a.src_addr.startsWith("172.27.")||
+						a.src_addr.startsWith("172.28.")||
+						a.src_addr.startsWith("172.29.")||
+						a.src_addr.startsWith("172.30.")||
+						a.src_addr.startsWith("172.31.")||
+						a.src_addr.startsWith("172.32.")
+						)players.add(0,player);
+				else players.add(player);
+			new geo(player);
+        }
+        for(NNData NNData:a.nip.NNData){
+        	if(NNData==null)continue;
+        	if(NNData.data==null)continue;
+	        if(NNData.type.compareTo("01")==0&&NNData.data.startsWith("0200050330")&&player.name.compareTo("New Player!")==0){//A player has appeared!!!
+				//Gets player's info
+				String name = new String(DatatypeConverter.parseHexBinary(NNData.data.substring(72,112)),Charset.forName("UTF-16"));
+				name = name.split("u\00")[0];
+				player.name = name;
+				player.bestPing = 9999;
+				//add player into the players list
+
+				System.out.println("Hi, "+name+"!  ^x^/");
+				return;
+			}
+	        if(player!=null)player.slot = NNData.slot;
+	        else return;
+			if(NNData.type.compareTo("24")==0 && (capture_modtion ||show_map || show_damage)){
+				if(NNData.data.startsWith("03D3")){
+					String def = deflate(NNData.data.substring(24));
+					if(def.compareTo("00")==0)continue;
+					String[] dem = Demess(def);
+					for(String fff:dem){
+						if(fff.startsWith("2012")){
+							//something...
+						}
+						if(fff.startsWith("103C")){//getting players location\
+							int x = (int) ((Long.parseLong(fff.substring(34,36)+fff.substring(32,34)+fff.substring(30,32)+fff.substring(28,30),16)&0x07FFFFF8)>>3);
+							x-=0x800000;
+							int y = (int) ((Long.parseLong(fff.substring(28,30)+fff.substring(26,28)+fff.substring(24,26)+fff.substring(22,24),16)&0x03FFFFFc)>>2);
+							y-=0x800000;
+							int z = (int) ((Long.parseLong(fff.substring(22,24)+fff.substring(20,22)+fff.substring(18,20)+fff.substring(16,18),16)&0x01FFFFFe)>>1);
+							z-=0x800000;
+							int camRotH = Integer.parseInt(fff.substring(88,90)+fff.substring(86,88)/*+fff.substring(84,86)+fff.substring(82,84)*/,16);
+							int camRotV = Integer.parseInt(fff.substring(92,94)+fff.substring(90,92),16)&0x0FFF;
+							int tank = Integer.parseInt(fff.substring(102,104)+fff.substring(100,102),16);
+							int damage = (Integer.parseInt(fff.substring(98,100)+fff.substring(96,98),16)& 0x1ff8)>>3;
+							int specalMeter = (Integer.parseInt(fff.substring(96,98)+fff.substring(94,96),16)& 0x07f0)>>4;
+							int surface = (Integer.parseInt(fff.substring(36,38)+fff.substring(34,36),16)&0x01f8)>>3;
+							if(surface >0&&surface<3)player.team=surface;
+							String p = fff.substring(0,16)+reverseHex(fff.substring(16));
+
+							x = (int) ((Long.parseLong(p.substring(100,108),16)&0x07FFFFF8)>>3);
+							x-=0x800000;
+							x+=512;
+							y = (int) ((Long.parseLong(p.substring(106,114),16)&0x03FFFFFc)>>2);
+							y-=0x800000;
+							y+=512;
+							z = (int) ((Long.parseLong(p.substring(112,120),16)&0x01FFFFFe)>>1);
+							z-=0x800000;
+							z+=512;
+							
+							
+							
+									if(surface==0)player.x=x;
+									if(surface==0)player.y=y;
+									if(surface==0)player.z=z;
+									player.camRotV=camRotV;
+									player.camRotH=camRotH;
+									player.specalMeter=specalMeter;
+									player.tank = tank;
+									player.health = damage;
+									player.specalMeter = specalMeter;
+									
+									player.surface = surface;
+									//if(i==0)holdit = fff.substring(34,60);//+fff.substring(96,98)
+									//players.get(i).health = health;
+									//if(player == players.get(0))sendDamage(damage);
+
+						}
+						if(fff.startsWith("301B")){
+							if(fff.endsWith("2")){
+								if(player == players.get(0) && player.nice>=200)udpinval(players.get(1).ip, players.get(1).port);
+								player.nice = 300;
+								player.comon = 0;
+							}
+							if(fff.endsWith("0")){
+								player.nice = 0;
+								player.comon = 300;
+							}
+						}
+						if(fff.startsWith("302D")){
+							//something...
+						}
+						if(fff.startsWith("3031")){
+							String p = fff.substring(0,52)+reverseHex(fff.substring(52));
+							int x = (int) ((Long.parseLong(p.substring(72, 80),16) & 0x01FFFFFE)>>1);
+							x-=0x800000;
+							int y = (int) (Long.parseLong(p.substring(80, 86),16));
+							y -= 0x800000;
+							int z = (int) ((Long.parseLong(p.substring(86, 94),16) & 0x7FFFFF80)>>7);
+							z -= 0x800000;
+						}
+						if(fff.startsWith("3032")){
+							int pnum = Integer.parseInt(fff.substring(10,14),16);
+							boolean found = false;
+							for(int i = 0;i <20;i++){
+								if(pnum==player.htrack[i])found = true;
+							}
+							if(!found){
+								System.arraycopy(player.htrack, 0, player.htrack, 1, 19);
+								player.htrack[0]= pnum;
+								if(fff.substring(52).startsWith("41")){
+									player.splats++;
+									player.snsplat = 600;
+									player.snsplate++;
+								}
+							}
+						}
+						if(fff.startsWith("3031")&&false){
+							String p = fff.substring(0,52)+reverseHex(fff.substring(52));
+							int numb = Integer.parseInt(p.substring(114),16);
+							switch (numb){
+							case 0xc4:
+								player.action = "Jumping";
+								break;
+							case 0x43:
+								player.action = "Splatted";
+								break;
+							case 0xC3:
+								player.action = "Splatted";
+								break;
+							}
+						}
+					}
+				}
+			}
+        }
+        if(player==null)return;
+		if((show_sent_data || show_game_data )&& players.size()>1){
+			Player h = players.get(1);
+			if(a.src_addr.startsWith(player.ip)&&a.src_port==player.port && a.dis_addr.startsWith(h.ip)&&a.dis_port==h.port)
+				holdPacket.add(a.nip);
+		}
+		
+    	//clocking thingy
+    	player.fmt = Math.min(60, Math.max(-6, player.fmt-6));
+    	//bitrate tracker
+    	player.net.setPacketFrom(array.length);
+    	for(Player r:players){
+	    	if(r.ip.compareTo(a.dis_addr)==0&&r.port==a.dis_port){//bitrate tracker
+	    		r.net.setPacketTo(array.length);
+	    	}
+    	}
+	}
+	public void onScreenRefresh(GraphicsContext gc){
+		int sf = 1;
+		if (this.fmi++%sf!=0)return;
+		ArrayList<Player> players = this.players;
+		int top = 30;
+		int fontSize = 15;
+		int textHeight = 13;
+		int square = 75;
+
+		int middle = 600;
+
+    	gc.setFill(Color.web("002200"));
+    	gc.fillRect(0, 0, 1280, 720);
+    	if(show_map){
+    		mapPrinter.Print(players, gc);
+    	}
+    	gc.setFill(Color.WHITE);
+		//map.drawMap(players, gc);
+    	for(int i = 0;i<8;i++){
+    		Player s = (players.size()>i)?players.get(i):dummy;
+    		Color v = Color.WHITE;
+    		if(players.size()>i){
+    			int sig = s.fmt;
+    			s.fmt=sig+sf;
+    			if(sig >12)v = Color.YELLOW;
+    			if(sig >=30)v = Color.RED;
+    			if(sig>500){//player timed out after 5 sec.
+	    			System.out.println("I guess "+players.get(i).name+" left. :/");
+	    			players.remove(i).left=true;
+	    			return;
+    			}
+    		}
+    		gc.setFill(v);
+    		gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, fontSize));
+    		gc.setTextAlign(TextAlignment.RIGHT);
+    		if(capture_modtion){
+    			gc.fillText(s.name, 180, (i*square)+(0*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.x/0x1)+"rx", 90, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.y/0x1)+"ry", 160, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.z/0x1)+"rz", 230, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(String.format("%.3f",s.camRotH/(((double)0xFFFF)/360.0d))+"°", 140, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.camRotV), 230, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(Long.toString(Math.round((float)s.tank/5.120))+"%", 130, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(String.format("%.1f",(float)s.health/10.240), 230, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.specalMeter)+"%", 180, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.surface), 230, (i*square)+(4*textHeight)+top);
+	    		
+
+    			gc.setTextAlign(TextAlignment.LEFT);
+    			gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, fontSize*4));
+    			if(s.comon>0){
+    				s.comon-=sf;
+    				if(s.comon>290)gc.setFill(Color.YELLOW);
+    				else gc.setFill(Color.WHITE);
+    				gc.fillText("TO ME!", 300, (i*square)+(3*textHeight)+top);
+    				if(s.comon>250)gc.setFill(Color.WHITE);
+    			}
+    			if(s.nice>0){
+    				s.nice-=sf;
+    				if(s.nice>290)gc.setFill(Color.GREEN);
+    				else gc.setFill(Color.WHITE);
+    				gc.fillText("NICE!", 300, (i*square)+(3*textHeight)+top);
+    			}
+    			switch(s.snsplate){
+    			case 2:
+    				gc.fillText("Double!", 300, (i*square)+(4*textHeight)+top);
+    				break;
+    			case 3:
+    				gc.fillText("Triple!", 300, (i*square)+(4*textHeight)+top);
+    				break;
+    			case 4:
+    				gc.setFill(Color.LIGHTGREEN);
+    				gc.fillText("QUAD!!!", 300, (i*square)+(4*textHeight)+top);
+    				gc.setFill(Color.WHITE);
+    				break;
+    			default:
+    			}
+    			if(s.snsplate>0){
+    				s.snsplat-=sf;
+    				if(s.snsplat<=0)s.snsplate=0;
+    			}
+				gc.setFill(Color.WHITE);
+    			gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, fontSize));
+	    		if(i==fallow && i <players.size()){
+	    			gc.setTextAlign(TextAlignment.LEFT);
+	    			gc.fillText("fallowing: "+s.name, 1, 700);
+	    			gc.setTextAlign(TextAlignment.RIGHT);
+	    			
+	    			if(s.surface == 0 && players.get(0).surface==0){
+	    				double angle = Math.toDegrees(Math.atan2(s.z - players.get(0).z, players.get(0).x - s.x));
+	    				angle += players.get(0).camRotH/(((double)0xFFFF)/360.0d);
+	    				if(angle >180)angle-=360;
+	    				angle *= -1;
+	    				double x = Math.sin(angle *2 * Math.PI/360d);
+	    				double y = Math.cos(angle*2 * Math.PI/360d);
+	    				gc.setStroke(Color.WHITE);
+	    				gc.strokeLine(847, 240, 847+(x*100), 240+(y*100));
+	    			}
+	    		}
+    		}
+			if(show_damage){
+	    		gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, fontSize*2));
+				if(players.size()!=0)
+				if(i!=0){
+    				double angle = Math.toDegrees(Math.atan2(s.z - players.get(0).z, players.get(0).x - s.x));
+    				angle += players.get(0).camRotH/(((double)0xFFFF)/360.0d);
+    				//if(angle >180)angle-=360;
+    				angle*=4;
+    				angle+=640;
+    					gc.setFill(Color.BLACK);
+    					gc.fillOval(angle, 300, 40, 40);
+    					gc.setFill(Color.WHITE);
+    					gc.fillText(String.format("%.1f",(float)s.health/10.240),angle, 300);
+    				//}
+				}else{
+					gc.setFill(Color.BLACK);
+					gc.fillOval(640, 680, 40, 40);
+					gc.setFill(Color.WHITE);
+					gc.fillText(String.format("%.1f",(float)s.health/10.240), 640, 680);
+				}
+			}
+    		if(show_bitrate){
+        		gc.setFill(v);
+	    		gc.fillText(i!=0?s.name:"Total", 180, (i*square)+(0*textHeight)+top);
+	    		gc.fillText("From", 100, (i*square)+(1*textHeight)+top);
+	    		gc.fillText("To", 200, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.bitratedown:s.net.bitrateup)/1000)+" kbps", 111, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.bitrateup:s.net.bitratedown)/1000)+" kbps", 211, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.packetdown:s.net.packetup))+" p/s", 100, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.packetup:s.net.packetdown))+" p/s", 200, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.packetsizedown+" bytes":"")), 116, (i*square)+(4*textHeight)+top);
+	    		gc.fillText(((i!=0?s.net.packetsizeup+" bytes":"")), 216, (i*square)+(4*textHeight)+top);
+	    		gc.fillText(s.location!=null&&fmi%600<300?s.location+"   "+s.bestPing:(s.ip + ":"+s.port), 300, (i*square)+(5*textHeight)+top);
+	    			gc.setTextAlign(TextAlignment.LEFT);
+	    		for(int q = 0;q < s.ipn.size();q++){
+	    			//gc.fillText(s.ipn.get(q), i%2==0?300:600,  (i*square)+(q*textHeight)+top);
+	    		}
+	    		gc.setTextAlign(TextAlignment.RIGHT);
+	    		//gc.fillText(((i!=0?s.net.movementdown+" md/s":"")), 100, (i*square)+(4*textHeight)+top);
+	    		//gc.fillText(((i!=0?s.net.movementup+" md/s":"")), 200, (i*square)+(4*textHeight)+top);
+    		}
+    	}
+		gc.setFill(Color.WHITE);
+		if(show_sent_data){
+        	gc.setFont(Font.font("Consolas", FontWeight.BOLD, 18));
+			gc.setTextAlign(TextAlignment.LEFT);
+			ArrayList<NNPacket> holdPacket = this.holdPacket;
+	    	for(int lv = 0,v = 0;holdPacket.size()>0 && lv==0;v++){
+	    		gc.setFill(Color.WHITE);
+	    		NNPacket mm = holdPacket.remove(0);
+	    		gc.fillText(mm.sub +" "+ mm.id+" "+ mm.counter +" "+ mm.msa +" "+ mm.msb,  5+(lv*500), 32+(12*v++));
+	    		if(mm.NNData!=null)for(NNData nndata:mm.NNData){
+	    			if(nndata==null){
+	    				gc.fillText("--null",  5+(lv*500), 32+(12*v++));
+	    				continue;
+	    			}
+	    			gc.fillText("--"+nndata.slot+" "+nndata.size+" "+nndata.nnid+" "+nndata.type+" "+ nndata.unknownTwo,  5+(lv*500), 32+(12*v++));
+	    			if(nndata.data==null){
+	    				gc.fillText("----null",  5+(lv*500), 32+(12*v++));
+	    				continue;
+	    			}
+	    			if(nndata.data.length()<4){
+	    				continue;
+	    			}
+	    			gc.fillText("-----" +nndata.data.substring(0, 4),  5+(lv*500), 32+(12*v++));
+	    			if(nndata.type.matches("24")){
+	    				if(nndata.data.startsWith("03D3")){
+	    					String def = deflate(nndata.data.substring(24));
+	    					if(def.compareTo("00")==0){
+	    						gc.fillText("----e " +nndata.data.substring(0, Math.min(32, nndata.data.length())),  5+(lv*500), 32+(12*v++));
+	    					}else{
+	    						String[] dem = Demess(def);
+	    						for(String ins:dem){
+	    							//gc.setFill(Color.web("#"+ins.substring(0, 6)));
+	    							String[] vp = ins.split("(?<=\\G.{32})");
+	    							for(String vi:vp)gc.fillText("------" +String.join(" ",vi.split("(?<=\\G.{16})")),  5+(lv*500), 32+(12*v++));
+	    							gc.fillText("------",  5+(lv*500), 32+(12*v++));
+	    							//gc.setFill(Color.WHITE);
+	    						}
+	    					}
+	    				}
+	    			}else{
+						String[] vp = nndata.data.split("(?<=\\G.{32})");
+						for(String vi:vp)gc.fillText("------" +String.join(" ",vi.split("(?<=\\G.{16})")),  5+(lv*500), 32+(12*v++));
+	    			}
+	    		}
+	    		else{
+					gc.fillText("--ept",  5+(lv*500), 32+(12*v++));
+	    		}
+	    		if(v>30){
+	    			v=-1;
+	    			lv++;
+	    		}
+	    	}
+		}
+		if(show_game_data){
+        	gc.setFont(Font.font("Consolas", FontWeight.BOLD, 18));
+			gc.setTextAlign(TextAlignment.LEFT);
+	    	gc.setFill(Color.WHITE);
+			ArrayList<NNPacket> holdPacket = this.holdPacket;
+	    	while(holdPacket.size()>0){
+	    		NNPacket mm = holdPacket.remove(0);
+	    		if(mm.NNData==null)continue;
+	    		for(NNData nndata:mm.NNData){
+	    			if(nndata==null)continue;
+	    			if(nndata.data==null)continue;
+	    			if(nndata.data.length()<4)continue;
+	    			if(!nndata.type.matches("24"))continue;
+	    			if(!nndata.data.startsWith("03D3"))continue;
+					String def = deflate(nndata.data.substring(24));
+					if(def.compareTo("00")==0)continue;
+					String[] dem = Demess(def);
+					found:for(String ins:dem){
+						String p = ins;
+						if(ins.startsWith("1")){
+							p = ins.substring(0,16)+reverseHex(ins.substring(16));
+							continue;
+						}
+						if(ins.startsWith("2")){
+							// something
+							continue;
+						}
+						if(ins.startsWith("3")){
+							if(ins.length()>52)
+							p = ins.substring(0,52)+reverseHex(ins.substring(52));
+							//continue;
+						}
+						
+						if(gamedata.size()==0){
+							gamedata.add(p);
+							continue;
+						}
+						for(int i = 0;i<gamedata.size();i++){
+							if(gamedata.get(i).startsWith(p.substring(0,4))){
+								gamedata.set(i, p);
+								continue found;
+							}
+						}
+						gamedata.add(p);
+					}
+	    		}
+	    	}int v=0;
+	    	for(String s : gamedata){
+	    		String[] vp = s.split("(?<=\\G.{32})");
+				for(String vi:vp)gc.fillText(String.join(" ",vi.split("(?<=\\G.{16})")),  5, 32+(12*v++));
+				v++;
+	    	}
+		}else{
+			while(holdPacket.size()!=0)holdPacket.remove(0);
+		}
+    }
+	public static void sendDamage(int damage){
+		Thread t = new Thread(){
+			@Override public void run(){try{
+				URL url = new URL("http://localhost/splatoon-health/put.php?d="+damage);
+		      HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		      conn.setRequestMethod("GET");
+		      BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		      while(rd.readLine()!=null){}
+		      rd.close();
+			}catch(Exception e){e.printStackTrace();}}
+		};
+		t.start();
+	}
+	public void startDamageFilter(){
+		Thread t = new Thread(){
+			@Override public void run(){try{
+				String[] v = AudioIn.getDrivers();
+				String p = "";
+				for(String r:v){
+					if(r.startsWith("Dig")){
+						p = r;
+						break;
+					}
+				}
+				if(p.isEmpty())return;
+				AudioIn s = new AudioIn();
+				s.setup(p, 44100, 16, 2, streamType.ACTIVE_STREAM);
+				AudioOut o = new AudioOut();
+				o.setup(AudioOut.getDrivers()[0], 44100, 16, 2, streamType.ACTIVE_STREAM);
+				float samp = 0.0f;
+				float ff = 0;
+				while(true){
+					float[] audio = s.getAudioFloat();
+					float[] out = new float[audio.length];
+					float hel = (players.size()!=0)?((float)players.get(0).health)/1000.0f:0;
+					hel = (float) Math.min(1, Math.sqrt(hel));
+					ff = (float) ((ff*.9)+(hel*.1));
+					for(int i = 0;i<audio.length;i++){
+						samp = (samp*ff)+(audio[i]*(1-ff));
+						out[i]=samp;
+					}
+					o.playAudio(out);
+				}
+			}catch(Exception e){e.printStackTrace();}}
+		};
+		t.start();
+	}
+	public static String deflate(String input){try {
+		byte[] data  = DatatypeConverter.parseHexBinary(input);
+		Inflater inflater = new Inflater();   
+		inflater.setInput(data);  
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);  
+		byte[] buffer = new byte[1024];
+		while (true) {  
+			int count;
+			count = inflater.inflate(buffer, 0, buffer.length);
+			outputStream.write(buffer, 0, count);
+			if(count<=0)break;
+		}  
+		outputStream.close();
+		return DatatypeConverter.printHexBinary(outputStream.toByteArray());
+	} catch (IllegalArgumentException | DataFormatException | IOException e){e.printStackTrace();return "00";} }
+	public String[] Demess(String data){
+		int a = 0;
+		int b =data.length()/2;
+		ArrayList<String> c = new ArrayList<String>();
+		while(a<b-4){
+			int s = Integer.parseInt(data.substring((a*2)+2,(a*2)+4),16);
+			if(b<a+s){
+				break;
+			}
+			c.add(data.substring(a*2,a*2+s*2));
+			a+=s;
+		}
+		String[] out = new String[c.size()];
+		int i = 0;
+		for(String v:c)out[i++]=v;
+		return out;
+	}
+	public static String reverseHex(String originalHex) {
+	    int lengthInBytes = originalHex.length() / 2;
+	    char[] chars = new char[lengthInBytes * 2];
+	    for (int index = 0; index < lengthInBytes; index++) {
+	        int reversedIndex = lengthInBytes - 1 - index;
+	        chars[reversedIndex * 2] = originalHex.charAt(index * 2);
+	        chars[reversedIndex * 2 + 1] = originalHex.charAt(index * 2 + 1);
+	    }
+	    return new String(chars);
+	}
+	public void onKeyPressed(KeyEvent ke) {
+		if(ke.getCode().equals(KeyCode.DIGIT1)){
+			capture_modtion = true;
+			show_bitrate = false;
+			show_sent_data = false;
+			show_game_data = false;
+			show_map = false;
+			show_damage = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT2)){
+			capture_modtion = false;
+			show_bitrate = true;
+			show_sent_data = false;
+			show_game_data = false;
+			show_map = false;
+			show_damage = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT3)){
+			capture_modtion = false;
+			show_bitrate = false;
+			show_sent_data = true;
+			show_game_data = false;
+			show_map = false;
+			show_damage = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT4)){
+			capture_modtion = false;
+			show_bitrate = false;
+			show_sent_data = false;
+			show_game_data = true;
+			show_map = false;
+			show_damage = false;
+		}
+		if(ke.getCode().equals(KeyCode.M)){
+			capture_modtion = false;
+			show_bitrate = false;
+			show_sent_data = false;
+			show_game_data = false;
+			show_map = true;
+			show_damage = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT9)){
+			capture_modtion = false;
+			show_bitrate = false;
+			show_sent_data = false;
+			show_game_data = false;
+			show_map = false;
+			show_damage = true;
+		}
+		if(ke.getCode().equals(KeyCode.Z)){
+			if(players.size()==0){
+				fallow = 0;
+				return;
+			}
+			fallow++;
+			fallow%=players.size();
+		}
+		if(ke.getCode().equals(KeyCode.D)){
+			udpinval(players.get(0).ip, players.get(0).port);
+		}
+	}
+	public static void udpinval(String ip, int port){
+		Thread t = new Thread(){@Override public void run(){try{
+			DatagramSocket clientSocket = new DatagramSocket();
+			InetAddress IPAddress = InetAddress.getByName(ip);
+			byte[] sendData = DatatypeConverter.parseHexBinary("32ab986401010000ffb2000008fd001000000000019122030400000100000000019122030071e0000000000461f5572697018711f977b23469ffa3b26f6f0a99");
+			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
+			long i=System.currentTimeMillis()+2000;
+			while(i>System.currentTimeMillis()){
+				if(System.currentTimeMillis()%10==0)sleep(1);
+				clientSocket.send(sendPacket);
+			}
+			clientSocket.close();
+		}catch(Exception e){}}};
+		t.start();
+	}
+}

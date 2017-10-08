@@ -1,0 +1,1124 @@
+2016-03-27 13:52:16,641 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not available. Remote download required.
+2016-03-27 21:39:15,379 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-27 23:23:47,114 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-03-29 22:33:15,993 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-04 23:46:14,163 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-05 19:36:45,795 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-06 19:26:47,310 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-06 22:10:24,271 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-06 23:06:54,867 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-07 19:06:07,131 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-08 19:11:32,810 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-09 11:26:06,242 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-09 13:11:07,655 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @7365429ms
+2016-04-09 13:11:07,890 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-04-09 13:11:07,999 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3b117004{/help,null,AVAILABLE}
+2016-04-09 13:11:08,051 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@269c4153{HTTP/1.1}{127.0.0.1:55608}
+2016-04-09 13:11:08,052 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @7365826ms
+2016-04-09 15:33:45,664 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@269c4153{HTTP/1.1}{127.0.0.1:0}
+2016-04-09 15:33:45,699 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3b117004{/help,null,UNAVAILABLE}
+2016-04-09 15:52:22,186 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-10 14:09:53,885 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-13 19:03:01,296 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-16 09:59:18,552 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-16 09:59:33,033 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_77]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_77]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2016-04-16 10:17:37,236 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-16 10:41:43,887 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @1527084ms
+2016-04-16 10:41:44,109 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-04-16 10:41:44,213 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@77bece1e{/help,null,AVAILABLE}
+2016-04-16 10:41:44,254 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@4c63cd80{HTTP/1.1}{127.0.0.1:50019}
+2016-04-16 10:41:44,255 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @1527453ms
+2016-04-16 11:38:31,089 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@4c63cd80{HTTP/1.1}{127.0.0.1:0}
+2016-04-16 11:38:31,129 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@77bece1e{/help,null,UNAVAILABLE}
+2016-04-22 16:10:56,791 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-04-22 21:53:19,973 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-04-23 16:16:46,969 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-15 13:51:58,067 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @682839ms
+2016-05-15 13:51:58,349 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-05-15 13:51:58,467 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4a50511a{/help,null,AVAILABLE}
+2016-05-15 13:51:58,507 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@7a84c443{HTTP/1.1}{127.0.0.1:49914}
+2016-05-15 13:51:58,508 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @683288ms
+2016-05-15 14:32:01,793 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-15 14:39:30,244 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@7a84c443{HTTP/1.1}{127.0.0.1:0}
+2016-05-15 14:39:30,273 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4a50511a{/help,null,UNAVAILABLE}
+2016-05-18 18:28:42,121 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @442300ms
+2016-05-18 18:28:42,440 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-05-18 18:28:42,543 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1575fb92{/help,null,AVAILABLE}
+2016-05-18 18:28:42,582 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@4865116{HTTP/1.1}{127.0.0.1:57093}
+2016-05-18 18:28:42,584 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @442772ms
+2016-05-18 19:52:23,643 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@4865116{HTTP/1.1}{127.0.0.1:0}
+2016-05-18 19:52:23,688 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1575fb92{/help,null,UNAVAILABLE}
+2016-05-20 13:14:58,953 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-20 13:19:15,981 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @367687ms
+2016-05-20 13:19:16,319 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-05-20 13:19:16,521 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@64d04f0b{/help,null,AVAILABLE}
+2016-05-20 13:19:16,585 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@368d981d{HTTP/1.1}{127.0.0.1:65069}
+2016-05-20 13:19:16,587 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @368293ms
+2016-05-20 15:17:23,879 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@368d981d{HTTP/1.1}{127.0.0.1:0}
+2016-05-20 15:17:23,939 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@64d04f0b{/help,null,UNAVAILABLE}
+2016-05-21 15:48:51,738 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-21 15:48:51,781 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_77]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_77]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2016-05-22 19:44:46,547 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-23 19:04:43,396 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-05-24 19:58:32,649 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-25 21:23:25,747 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-26 22:44:08,395 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-05-26 22:44:19,541 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_77]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_77]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2016-05-26 22:46:10,453 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-06-24 11:04:49,963 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-06-24 18:16:16,093 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-06-24 20:55:11,136 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-06-25 00:18:00,439 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-06-25 12:00:41,937 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-06-25 12:00:42,725 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_77]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_77]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_77]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_77]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_77]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2016-06-25 20:46:08,645 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-06-27 20:36:14,642 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-02 13:18:06,828 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-02 23:47:32,705 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-03 18:00:30,824 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-03 20:55:47,380 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-04 09:20:20,808 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-04 18:50:54,152 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-04 22:30:36,779 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-05 19:36:53,728 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-08 00:03:34,177 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-08 00:50:09,588 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-08 11:36:27,619 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-13 20:04:32,883 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-15 12:50:29,809 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-15 22:55:15,505 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-16 13:07:24,813 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-16 23:35:49,189 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-17 12:52:04,674 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-20 20:40:52,643 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-20 20:59:20,155 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-20 21:56:12,206 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-21 22:12:59,994 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-23 13:51:52,485 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-23 18:18:53,489 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-24 01:13:13,788 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-07-28 21:06:38,773 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-07-29 23:09:55,854 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-02 21:22:32,295 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-04 19:23:07,108 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-09 22:10:53,227 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-10 00:46:47,673 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-10 19:16:11,510 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-10 19:45:44,596 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-12 11:33:53,654 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-13 12:36:35,233 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-13 16:13:59,937 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-14 14:08:07,432 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-14 17:00:07,219 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-14 21:36:05,905 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-15 19:27:53,802 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-15 21:54:21,481 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-16 19:16:16,670 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-18 20:17:34,740 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-18 22:51:50,427 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-19 13:40:42,483 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-08-21 16:53:11,679 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-22 20:31:56,386 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-08-25 14:30:41,609 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-23 19:02:51,187 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-25 01:16:57,710 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-25 12:47:14,596 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-09-25 15:26:19,859 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-09-25 18:57:17,261 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-09-29 22:36:48,654 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-09-29 22:40:22,868 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-09-30 11:42:55,871 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-09-30 16:52:54,526 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-02 00:13:48,016 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @1589527ms
+2016-10-02 00:13:48,410 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-10-02 00:13:48,538 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@21c7cb3b{/help,null,AVAILABLE}
+2016-10-02 00:13:48,587 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@11871f3a{HTTP/1.1}{127.0.0.1:55436}
+2016-10-02 00:13:48,589 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @1590339ms
+2016-10-02 01:43:07,476 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@11871f3a{HTTP/1.1}{127.0.0.1:0}
+2016-10-02 01:43:07,510 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@21c7cb3b{/help,null,UNAVAILABLE}
+2016-10-07 22:36:35,770 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-08 15:06:45,242 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-09 00:29:23,605 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-09 14:11:50,827 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-09 19:24:18,714 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-09 20:52:48,750 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @5802662ms
+2016-10-09 20:52:49,183 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-10-09 20:52:49,360 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e2e749d{/help,null,AVAILABLE}
+2016-10-09 20:52:49,431 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@3dc2c7d5{HTTP/1.1}{127.0.0.1:51687}
+2016-10-09 20:52:49,434 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @5803346ms
+2016-10-09 22:40:56,619 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@3dc2c7d5{HTTP/1.1}{127.0.0.1:0}
+2016-10-09 22:40:56,657 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e2e749d{/help,null,UNAVAILABLE}
+2016-10-11 19:41:48,536 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-12 20:11:19,966 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-13 20:35:14,061 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-14 01:38:53,466 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-14 16:16:35,419 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-15 00:17:50,200 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-15 13:34:59,871 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-15 19:05:13,792 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-16 14:41:10,769 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-20 21:14:47,364 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-21 15:29:05,662 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-23 15:36:24,967 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-23 19:08:14,595 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-25 18:30:31,480 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-27 20:16:16,788 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-28 23:39:50,446 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-10-29 10:00:51,941 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-10-29 21:49:45,559 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-03 21:11:02,702 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-03 21:30:08,966 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-07 19:32:02,658 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-08 18:52:25,961 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-09 20:35:05,707 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-09 20:37:12,006 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-09 20:43:14,137 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-10 18:34:25,080 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-17 18:44:23,415 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-18 15:28:06,419 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-18 20:07:25,241 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-19 12:19:12,702 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-27 20:44:22,113 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-29 20:12:01,268 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @900718ms
+2016-11-29 20:12:01,648 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-11-29 20:12:01,781 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4095cc6b{/help,null,AVAILABLE}
+2016-11-29 20:12:01,838 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@7e6178b5{HTTP/1.1}{127.0.0.1:56383}
+2016-11-29 20:12:01,848 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @901307ms
+2016-11-29 20:48:14,056 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-11-29 21:30:48,482 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@7e6178b5{HTTP/1.1}{127.0.0.1:0}
+2016-11-29 21:30:48,521 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4095cc6b{/help,null,UNAVAILABLE}
+2016-11-30 19:32:13,692 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @45303ms
+2016-11-30 19:32:14,586 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-11-30 19:32:14,715 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6e8fbd2e{/help,null,AVAILABLE}
+2016-11-30 19:32:14,758 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@41faf49d{HTTP/1.1}{127.0.0.1:60220}
+2016-11-30 19:32:14,759 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @46378ms
+2016-11-30 20:03:53,182 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-11-30 22:23:00,498 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@41faf49d{HTTP/1.1}{127.0.0.1:0}
+2016-11-30 22:23:00,547 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6e8fbd2e{/help,null,UNAVAILABLE}
+2016-12-01 00:21:13,958 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @582332ms
+2016-12-01 00:21:14,366 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-12-01 00:21:14,483 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@d7d217c{/help,null,AVAILABLE}
+2016-12-01 00:21:14,531 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@68fea8b5{HTTP/1.1}{127.0.0.1:63171}
+2016-12-01 00:21:14,532 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @582913ms
+2016-12-01 00:32:46,904 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-01 00:55:55,051 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@68fea8b5{HTTP/1.1}{127.0.0.1:0}
+2016-12-01 00:55:55,110 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@d7d217c{/help,null,UNAVAILABLE}
+2016-12-01 18:34:27,002 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-12-10 18:50:58,486 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-10 22:06:19,323 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @11764953ms
+2016-12-10 22:06:19,754 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2016-12-10 22:06:19,897 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@78633a69{/help,null,AVAILABLE}
+2016-12-10 22:06:19,957 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@7dc6e369{HTTP/1.1}{127.0.0.1:61305}
+2016-12-10 22:06:19,958 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @11765590ms
+2016-12-10 22:44:56,953 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@7dc6e369{HTTP/1.1}{127.0.0.1:0}
+2016-12-10 22:44:56,989 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@78633a69{/help,null,UNAVAILABLE}
+2016-12-14 23:20:42,711 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-15 20:06:02,151 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-12-16 21:42:52,884 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-17 13:20:07,243 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-12-21 20:38:10,929 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-24 22:16:24,198 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-24 23:50:54,126 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-12-25 17:43:15,676 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2016-12-28 20:24:52,877 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2016-12-29 20:22:30,345 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-01-22 16:26:17,896 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-01-27 19:58:01,391 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-01-27 19:58:13,457 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_101]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2017-01-27 20:54:44,155 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-02 22:00:20,006 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-03 16:12:11,103 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-02-03 16:28:23,461 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-02-07 19:06:16,226 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-09 19:46:12,787 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-10 14:49:52,156 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-02-10 20:35:27,073 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-11 11:22:46,720 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-02-18 03:16:39,030 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-18 03:16:39,637 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_101]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2017-02-18 23:50:47,847 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-21 20:59:13,885 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-21 21:04:11,213 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is not out-of-date. No remote download required.
+2017-02-23 21:00:53,046 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-02-23 21:00:53,859 [main] ERROR c.g.t.t.d.PublishedGradleVersions - Cannot download published Gradle versions.
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.NetworkClient.doConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source) ~[na:1.8.0_101]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134) [com.gradleware.tooling.utils_0.8.1.v201512100932.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:167) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:140) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:103) [org.eclipse.buildship.core_1.0.8.v20160201-1803.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) [na:1.8.0_101]
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.getConstructor0(Unknown Source) [na:1.8.0_101]
+	at java.lang.Class.newInstance(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.container.Module.start(Module.java:439) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at java.lang.ClassLoader.loadClass(Unknown Source) [na:1.8.0_101]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55) [org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar:na]
+	at org.eclipse.core.internal.expressions.PropertyTesterDescriptor.instantiate(PropertyTesterDescriptor.java:96) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtension.findTypeExtender(TypeExtension.java:130) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:119) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55) [org.eclipse.core.expressions_3.5.0.v20150421-2214.jar:na]
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:455) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:115) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:81) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:82) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:420) [org.eclipse.debug.ui_3.11.101.v20160203-1230.jar:na]
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:237) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462) [org.eclipse.jface_3.11.1.v20160128-1644.jar:na]
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769) [org.eclipse.swt.win32.win32.x86_64_3.104.2.v20160212-1350.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018) [org.eclipse.e4.ui.workbench.swt_0.13.0.v20150504-0621.jar:na]
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156) [org.eclipse.e4.ui.workbench_1.3.1.v20160203-0951.jar:na]
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337) [org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar:na]
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150) [org.eclipse.ui.workbench_3.107.1.v20160120-2131.jar:na]
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139) [org.eclipse.ui.ide.application_1.1.0.v20150422-0725.jar:na]
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196) [org.eclipse.equinox.app_1.3.300.v20150423-1356.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235) [org.eclipse.osgi_3.10.102.v20160118-1700.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_101]
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515) [org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar:na]
+2017-02-28 20:00:50,824 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-04 00:29:38,939 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @103783ms
+2017-03-04 00:29:39,366 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2017-03-04 00:29:39,506 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@362f25e6{/help,null,AVAILABLE}
+2017-03-04 00:29:39,549 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@3d5e0d78{HTTP/1.1}{127.0.0.1:49887}
+2017-03-04 00:29:39,550 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @104404ms
+2017-03-04 00:31:30,260 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-04 01:51:00,422 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@3d5e0d78{HTTP/1.1}{127.0.0.1:0}
+2017-03-04 01:51:00,491 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@362f25e6{/help,null,UNAVAILABLE}
+2017-03-11 18:54:56,861 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-24 21:59:06,874 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-27 20:47:38,029 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @4688291ms
+2017-03-27 20:47:38,393 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.2.13.v20150730
+2017-03-27 20:47:38,506 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@13df95fa{/help,null,AVAILABLE}
+2017-03-27 20:47:38,565 [Start Help Server] INFO  o.e.jetty.server.ServerConnector - Started ServerConnector@64ee7eff{HTTP/1.1}{127.0.0.1:58468}
+2017-03-27 20:47:38,568 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @4688837ms
+2017-03-27 20:48:29,194 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-27 21:57:55,270 [Stop Help Server] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@64ee7eff{HTTP/1.1}{127.0.0.1:0}
+2017-03-27 21:57:55,313 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@13df95fa{/help,null,UNAVAILABLE}
+2017-03-29 22:20:01,404 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-03-31 19:56:08,067 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-04-05 21:30:13,581 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-04-18 21:31:36,031 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-04-23 18:26:30,589 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-04-23 21:06:50,414 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-23 19:27:39,128 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-26 19:44:22,600 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-26 20:09:59,305 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-27 13:51:43,231 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-27 20:47:10,218 [Worker-14] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-28 04:54:18,764 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-05-29 12:41:24,903 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-05-29 15:57:21,227 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-02 14:23:24,783 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-02 15:43:40,207 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-09 20:15:18,259 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-10 12:39:27,890 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-16 16:04:23,300 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-16 16:04:23,894 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2017-06-16 17:25:38,480 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-24 21:54:36,278 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-07-27 03:21:26,834 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-07 20:13:28,455 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-10-07 21:05:27,654 [Worker-19] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-08 14:39:49,283 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-08 16:58:50,140 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-08 17:13:37,396 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-10-08 17:18:59,482 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

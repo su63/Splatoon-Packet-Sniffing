@@ -1,0 +1,307 @@
+package splatoon;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+
+import javax.xml.bind.DatatypeConverter;
+
+import org.jnetpcap.nio.JBuffer;
+import org.jnetpcap.packet.PcapPacket;
+
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
+
+public class handelbid {//netsh wlan start hostednetwork
+
+	ArrayList<Player> players = new ArrayList<Player>();
+	Player dummy = new Player();
+	ArrayList<NNPacket> holdPacket = new ArrayList<NNPacket>();
+	int frame = 0;
+	boolean capture_modtion = false;
+	boolean show_bitrate = false;
+	boolean show_sent_data = false;
+	int fmi = 0;
+	
+	public static void main(String[]a){
+		 splatlive.init(a);
+	}
+	public handelbid(){
+		dummy.bestPing = 1000;
+		dummy.surface = 20;
+		dummy.tank = 512;
+		dummy.name = "NoSquidKid";
+	}
+	public void onNewPacket(PcapPacket packet){
+		ArrayList<Player> players = this.players;
+        int size = packet.size();  
+        JBuffer buffer = packet; 
+        byte[] array = buffer.getByteArray(0, size);  
+        UDPPacket a = new UDPPacket(array);
+        if(a.nip==null)return;
+        if(a.nip.NNData==null)return;
+        Player player = null;
+		for(int i = 0;i < players.size();i++){
+			player = players.get(i);
+			if(player.ip.matches(a.src_addr) && player.port == a.src_port)break;
+			player = null;
+		}
+        
+        for(NNData NNData:a.nip.NNData){
+        	if(NNData==null)continue;
+        	if(NNData.data==null)continue;
+	        if(NNData.type.compareTo("01")==0&&NNData.data.startsWith("0200050330") && player==null){//A player has appeared!!!
+				Player newplayer = new Player();
+				//Gets player's info
+				newplayer.ip = a.src_addr;
+				String name = new String(DatatypeConverter.parseHexBinary(NNData.data.substring(72,112)),Charset.forName("UTF-16"));
+				name = name.split("u\00")[0];
+				newplayer.name = name;
+				newplayer.port = a.src_port;
+				newplayer.bestPing = 9999;
+				//add player into the players list
+				players.add(newplayer);
+				System.out.println("Hi, "+name+"!  ^x^/");
+				return;
+			}
+	        if(player!=null)player.slot = NNData.slot;
+	        else return;
+			if(NNData.type.compareTo("24")==0 && capture_modtion){
+				if(NNData.data.startsWith("03D3")){
+					String def = deflate(NNData.data.substring(24));
+					if(def.compareTo("00")==0)continue;
+					String[] dem = Demess(def);
+					for(String fff:dem){
+						if(fff.startsWith("2012")){
+							//something...
+						}
+						if(fff.startsWith("103C")){//getting players location\
+							int x = (int) ((Long.parseLong(fff.substring(34,36)+fff.substring(32,34)+fff.substring(30,32)+fff.substring(28,30),16)&0x07FFFFF8)>>3);
+							x-=0x7FFFFF;
+							int y = (int) ((Long.parseLong(fff.substring(28,30)+fff.substring(26,28)+fff.substring(24,26)+fff.substring(22,24),16)&0x03FFFFFc)>>2);
+							y-=0x7FFFFF;
+							int z = (int) ((Long.parseLong(fff.substring(22,24)+fff.substring(20,22)+fff.substring(18,20)+fff.substring(16,18),16)&0x01FFFFFe)>>1);
+							z-=0x7FFFFF;
+							int camRotH = Integer.parseInt(fff.substring(88,90)+fff.substring(86,88)/*+fff.substring(84,86)+fff.substring(82,84)*/,16);
+							int camRotV = Integer.parseInt(fff.substring(92,94)+fff.substring(90,92),16)&0x0FFF;
+							int tank = Integer.parseInt(fff.substring(102,104)+fff.substring(100,102),16);
+							int damage = (Integer.parseInt(fff.substring(98,100)+fff.substring(96,98),16)& 0x1ff8)>>3;
+							int specalMeter = (Integer.parseInt(fff.substring(96,98)+fff.substring(94,96),16)& 0x07f0)>>4;
+							int surface = (Integer.parseInt(fff.substring(36,38)+fff.substring(34,36),16)&0x07f8)>>3;
+
+									player.x=x;
+									player.y=y;
+									player.z=z;
+									player.camRotV=camRotV;
+									player.camRotH=camRotH;
+									player.specalMeter=specalMeter;
+									player.tank = tank;
+									player.health = damage;
+									player.specalMeter = specalMeter;
+									
+									player.surface = surface;
+									//if(i==0)holdit = fff.substring(34,60);//+fff.substring(96,98)
+									//players.get(i).health = health;
+
+						}
+						if(fff.startsWith("302D")){
+							//something...
+						}
+					}
+				}
+			}
+        }
+        if(player==null)return;
+		if(show_sent_data && players.size()>1){
+			Player h = players.get(1);
+			if(a.src_addr.startsWith(player.ip)&&a.src_port==player.port && a.dis_addr.startsWith(h.ip)&&a.dis_port==h.port)
+				holdPacket.add(a.nip);
+		}
+		
+    	if(player.ip.compareTo(a.src_addr)==0&&player.port==a.src_port){//clocking thingy
+    		player.fmt = Math.min(60, Math.max(0, player.fmt-4));
+    	}
+    	//bitrate tracker
+    	player.net.setPacketFrom(array.length);
+    	for(Player r:players){
+	    	if(r.ip.compareTo(a.dis_addr)==0&&r.port==a.dis_port){//bitrate tracker
+	    		r.net.setPacketTo(array.length);
+	    	}
+    	}
+	}
+	public void onScreenRefresh(GraphicsContext gc){
+		if (this.fmi++%6!=0)return;
+		ArrayList<Player> players = this.players;
+		int top = 30;
+		int fontSize = 15;
+		int textHeight = 13;
+		int square = 62;
+
+		int middle = 600;
+
+    	gc.setFill(Color.BLACK);
+    	gc.fillRect(0, 0, 1280, 720);
+    	gc.setFill(Color.WHITE);
+    	for(int i = 0;i<8;i++){
+    		gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, fontSize));
+    		gc.setFill(Color.WHITE);
+    		Player s = (players.size()>i)?players.get(i):dummy;
+    		if(players.size()>i){
+    			int sig = s.fmt++;
+    			if(sig>300){//player timed out after 5 sec.
+	    			System.out.println("I guess "+players.get(i).name+" left. :/");
+	    			players.remove(i);
+	    			return;
+    			}
+    		}
+    		if(capture_modtion){
+    			gc.setTextAlign(TextAlignment.RIGHT);
+    			gc.fillText(s.slot+" "+s.name, 270, (i*square)+(0*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.x/0x1)+"rx", 110, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.y/0x1)+"ry", 180, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.z/0x1)+"rz", 250, (i*square)+(1*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.camRotH/(0xFFFF/360))+"°", 200, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.camRotV), 250, (i*square)+(2*textHeight)+top);
+	    		gc.fillText(Long.toString(Math.round((float)s.tank/5.120))+"%", 150, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(String.format("%.1f",(float)s.health/10.240), 250, (i*square)+(3*textHeight)+top);
+	    		gc.fillText(Integer.toString(s.specalMeter)+"%", 200, (i*square)+(3*textHeight)+top);
+    		}
+    		if(show_bitrate){
+    			gc.setTextAlign(TextAlignment.RIGHT);
+	        	gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, 21));
+	    		gc.fillText(i!=0?s.name:"Total", 284+(i*142)-30, middle);
+	        	gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, 28));
+	    		gc.fillText(((i!=0?s.net.bitratedown:s.net.bitrateup)/1000)+" kbps",  284+(i*142)-30,middle-30);
+	    		gc.fillText(((i!=0?s.net.bitrateup:s.net.bitratedown)/1000)+" kbps",  284+(i*142)-30, middle+30);
+	        	gc.setFont(Font.font("Cooper Std", FontWeight.BOLD, 21));
+	    		gc.fillText(((i!=0?s.net.movementdown+" md/s":"")),  284+(i*142)-30,middle-100);
+	    		gc.fillText(((i!=0?s.net.packetsizedown+" bytes":"")),  284+(i*142)-30,middle-80);
+	    		gc.fillText(((i!=0?s.net.packetdown:s.net.packetup))+" p/s",  284+(i*142)-52,middle-60);
+	    		gc.fillText(((i!=0?s.net.packetup:s.net.packetdown))+" p/s",  284+(i*142)-52,middle+60);
+	    		gc.fillText(((i!=0?s.net.packetsizeup+" bytes":"")),  284+(i*142)-30,middle+80);
+	    		gc.fillText(((i!=0?s.net.movementup+" md/s":"")),  284+(i*142)-30,middle+100);
+    		}
+    	}
+		if(show_bitrate){
+			gc.setTextAlign(TextAlignment.RIGHT);
+			gc.setFill(Color.WHITE);
+			gc.fillText("From:",  142-30,middle-30);
+			gc.fillText("To:",  142-30, middle+30);
+		}
+		if(show_sent_data){
+			gc.setTextAlign(TextAlignment.LEFT);
+			ArrayList<NNPacket> holdPacket = this.holdPacket;
+	    	for(int lv = 0,v = 0;holdPacket.size()>0 && lv==0;v++){
+	    		gc.setFill(Color.WHITE);
+	    		NNPacket mm = holdPacket.remove(0);
+	    		gc.fillText(mm.sub +" "+ mm.id+" "+ mm.counter +" "+ mm.msa +" "+ mm.msb,  50+(lv*500), 32+(12*v++));
+	    		if(mm.NNData!=null)for(NNData nndata:mm.NNData){
+	    			if(nndata==null){
+	    				gc.fillText("--null",  50+(lv*500), 32+(12*v++));
+	    				continue;
+	    			}
+	    			gc.fillText("--"+nndata.slot+" "+nndata.size+" "+nndata.nnid+" "+nndata.type+" "+ nndata.unknownTwo,  50+(lv*500), 32+(12*v++));
+	    			if(nndata.data==null){
+	    				gc.fillText("----null",  50+(lv*500), 32+(12*v++));
+	    				continue;
+	    			}
+	    			if(nndata.data.length()<4){
+	    				continue;
+	    			}
+	    			gc.fillText("-----" +nndata.data.substring(0, 4),  50+(lv*500), 32+(12*v++));
+	    			if(nndata.type.matches("24")){
+	    				if(nndata.data.startsWith("03D3")){
+	    					String def = deflate(nndata.data.substring(24));
+	    					if(def.compareTo("00")==0){
+	    						gc.fillText("----e " +nndata.data.substring(0, Math.min(32, nndata.data.length())),  50+(lv*500), 32+(12*v++));
+	    					}else{
+	    						String[] dem = Demess(def);
+	    						int oth = 0;
+	    						for(String ins:dem){
+	    							if(ins.startsWith("3007")){
+	    								oth++;
+	    								continue;
+	    							}
+	    							//gc.setFill(Color.web("#"+ins.substring(0, 6)));
+	    							String[] vp = ins.split("(?<=\\G.{32})");
+	    							for(String vi:vp)gc.fillText("------" +String.join(" ",vi.split("(?<=\\G.{16})")),  50+(lv*500), 32+(12*v++));
+	    							gc.fillText("------",  50+(lv*500), 32+(12*v++));
+	    							//gc.setFill(Color.WHITE);
+	    						}
+	    						if(oth>0)gc.fillText("------3007 x"+oth,  50+(lv*500), 32+(12*v++));
+	    					}
+	    				}
+	    			}else{
+	    				gc.fillText("------z " +nndata.data.substring(0, Math.min(32, nndata.data.length())), 50+(lv*500), 32+(12*v++));
+	    			}
+	    		}
+	    		else{
+					gc.fillText("--ept",  50+(lv*500), 32+(12*v++));
+	    		}
+	    		if(v>50){
+	    			v=-1;
+	    			lv++;
+	    		}
+	    	}
+		}else{
+			while(holdPacket.size()!=0)holdPacket.remove(0);
+		}
+    }
+	public static String deflate(String input){try {
+		byte[] data  = DatatypeConverter.parseHexBinary(input);
+		Inflater inflater = new Inflater();   
+		inflater.setInput(data);  
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);  
+		byte[] buffer = new byte[1024];
+		while (true) {  
+			int count;
+			count = inflater.inflate(buffer, 0, buffer.length);
+			outputStream.write(buffer, 0, count);
+			if(count<=0)break;
+		}  
+		outputStream.close();
+		return DatatypeConverter.printHexBinary(outputStream.toByteArray());
+	} catch (IllegalArgumentException | DataFormatException | IOException e){e.printStackTrace();return "00";} }
+	public String[] Demess(String data){
+		int a = 0;
+		int b =data.length()/2;
+		ArrayList<String> c = new ArrayList<String>();
+		while(a<b-4){
+			int s = Integer.parseInt(data.substring((a*2)+2,(a*2)+4),16);
+			if(b<a+s){
+				break;
+			}
+			c.add(data.substring(a*2,a*2+s*2));
+			a+=s;
+		}
+		String[] out = new String[c.size()];
+		int i = 0;
+		for(String v:c)out[i++]=v;
+		return out;
+	}
+	public void onKeyPressed(KeyEvent ke) {
+		if(ke.getCode().equals(KeyCode.DIGIT1)){
+			capture_modtion = true;
+			show_bitrate = false;
+			show_sent_data = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT2)){
+			capture_modtion = false;
+			show_bitrate = true;
+			show_sent_data = false;
+		}
+		if(ke.getCode().equals(KeyCode.DIGIT3)){
+			capture_modtion = false;
+			show_bitrate = false;
+			show_sent_data = true;
+		}
+	}
+}

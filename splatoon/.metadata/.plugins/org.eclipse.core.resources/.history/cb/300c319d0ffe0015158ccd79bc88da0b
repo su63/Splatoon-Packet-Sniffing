@@ -1,0 +1,129 @@
+package splatoon;
+import java.awt.image.DataBufferByte;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+import java.util.zip.InflaterInputStream;
+
+import javax.xml.bind.DatatypeConverter;
+
+import javafx.animation.AnimationTimer;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcType;
+import javafx.scene.text.Font;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
+
+public class GraphicsOut extends Application {
+	dgm holder;
+	int fp=0;
+	int mode = 0;
+	int voto = 16;
+	float[] avg = new float[25];
+	 public static void main(String[] args) {
+        launch(args);
+    }
+ 
+    @Override public void start(Stage primaryStage) {
+    	holder = new dgm();
+    	holder.p = fileRead.Read(new File("C:\\Users\\super\\Documents\\splatoonfull.txt"));
+    	holder.pos = holder.p.get(0).time-500+25000;
+    	long last = holder.p.get(holder.p.size()-1).time-30000; 
+    	holder.range = 500;
+    	holder.next();
+        primaryStage.setTitle("Graph");
+        Group root = new Group();
+        Canvas canvas = new Canvas(1280, 720);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFont(Font.font("Consolas"));
+        AnimationTimer frameRateMeter = new AnimationTimer() {
+            @Override public void handle(long now) {
+            	if(mode == 1)return;
+            	fp++;
+            	fp%=6;
+            	//if(fp!=0)return;
+            	holder.next();
+            	if(holder.pos>last)holder.pos = holder.p.get(0).time-500+20000;
+            	drawShapes(gc);
+            }
+        };
+        root.getChildren().add(canvas);
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+        frameRateMeter.start();
+        primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
+            if(key.getCode()==KeyCode.A) {
+            	mode = 1;
+            }
+            if(key.getCode()==KeyCode.S) {
+            	holder.pos-=200;
+            }
+            if(key.getCode()==KeyCode.I) {
+            	voto-=2;
+            }
+            if(key.getCode()==KeyCode.O) {
+            	voto+=2;
+            }
+      });primaryStage.addEventHandler(KeyEvent.KEY_RELEASED, (key) -> {
+          if(key.getCode()==KeyCode.A) {
+          	mode = 0;
+          }
+    });
+    }
+
+    private void drawShapes(GraphicsContext gc) {
+    	gc.setFill(Color.BLACK);
+    	gc.fillRect(0, 0, 1280, 720);
+    	gc.setFill(Color.WHITE);
+    	gc.setFont(Font.font("Consolas"));
+    	for(int i = 0,po = 12;i<holder.t.size();i++){
+    		//gc.fillText(String.valueOf(i),10,i*12);
+    		if(holder.t.get(i).nip.type.compareTo("24")!=0)continue;
+    		if(!holder.t.get(i).dis_addr.startsWith("192.168."))continue;
+    		nnip2 d = new nnip2(holder.t.get(i).data);
+    		if(!d.data[0].startsWith("03D3"))continue;
+    		String fff = deflate(d.data[0].substring(24));
+    		if(!fff.startsWith("103C"))continue;
+    		//gc.fillText(holder.t.get(i).src_addr+"->"+holder.t.get(i).dis_addr, 0, po);
+    		//gc.fillText(fff, 0, po+12);
+    		String vp = fff.substring(voto, voto+18);
+    		int x = Integer.parseUnsignedInt(Fix(vp.substring(0,6)),16);
+    		int y = Integer.parseUnsignedInt(Fix(vp.substring(6,12)),16);
+    		int z = Integer.parseUnsignedInt(Fix(vp.substring(12,18)),16);
+    		System.out.println(x+", "+y+", "+z);
+    		gc.fillOval((x/3200)%1024, (z/3200)%1024, 5, 5);
+    		po+=24;
+    	}
+    }
+    public static String Fix(String in){
+    	return in.substring(4,6)+in.substring(2,4)+in.substring(0,2);
+    }
+    public static String deflate(String input){try {
+    	byte[] data  = DatatypeConverter.parseHexBinary(input);
+    	Inflater inflater = new Inflater();   
+    	inflater.setInput(data);  
+    	ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);  
+    	byte[] buffer = new byte[1024];
+    	int loop = 0;
+    	while (!inflater.finished()) {  
+    		int count;
+			count = inflater.inflate(buffer);
+    		outputStream.write(buffer, 0, count);
+    		loop++;
+    		if(loop>10)return"00";
+    	}  
+    	outputStream.close();
+    	return DatatypeConverter.printHexBinary(outputStream.toByteArray());
+	} catch (DataFormatException | IOException e){return "00";} }
+}
